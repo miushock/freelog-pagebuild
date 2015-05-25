@@ -30,7 +30,11 @@ exports.template = function(grunt, init, done) {
       version: '0.0.0',
 
       devDependencies: {
-        'grunt-contrib-jshint': '~0.11.2'
+        'grunt-contrib-jshint': '~0.11.2',
+        'grunt-contrib-watch': '~0.6.0',
+        'jsdom': '~3.0.0',
+        'jquery': '~2.1.4',
+        'freelog-widgetscript': '~0.0.2'
       }
     });
 

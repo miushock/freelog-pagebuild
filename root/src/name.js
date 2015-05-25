@@ -1,3 +1,4 @@
-if ({%= name %} == null || typeof({%= name %})!= "object"){
-  var {%= name %} = {}
-}
+define('{%=name%}', ['freelog_api'], function(freelog_api){
+  var {%=name%} = {};
+  return {%name%};
+});
