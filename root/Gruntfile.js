@@ -14,7 +14,7 @@ module.exports = function(grunt) {
       tasks: ['jshint']
     },
     build_index_page: {
-      widget_file: "./src/miu.html",
+      widget_file: "./src/{%=name%}.html",
       container_file: "./template/container.html",
       dest: "./test/index.html"
     }
