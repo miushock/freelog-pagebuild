@@ -13,6 +13,12 @@ module.exports = function(grunt) {
       files: ['<%= jshint.files %>'],
       tasks: ['jshint']
     },
+    copy: {
+      scripts: {
+        src: './src/scripts',
+        dest: './test'
+      }
+    },
     build_index_page: {
       widget_file: "./src/{%=name%}.html",
       container_file: "./template/container.html",
@@ -23,6 +29,7 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-jshint');
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('freelog-widgetscript');
+  grunt.loadNpmTasks('grunt-contrib-copy');
 
   grunt.registerTask('default', ['jshint']);
 
