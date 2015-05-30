@@ -32,7 +32,7 @@ exports.template = function(grunt, init, done) {
       devDependencies: {
         'grunt-contrib-jshint': '~0.11.2',
         'grunt-contrib-watch': '~0.6.0',
-        'grunt-contrip-copy': '~0.8.0',
+        'grunt-contrib-copy': '~0.8.0',
         'jsdom': '~3.0.0',
         'jquery': '~2.1.4',
         'freelog-widgetscript': '~0.0.2'
