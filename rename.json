@@ -1,5 +1,6 @@
 {
   "src/name.html": "src/{%= name %}.html",
   "src/name.css": "src/{%= name %}.css",
+  "src/name.js": "src/{%= name %}.js,
   "src/scripts/app/name.js": "src/scripts/app/{%= name %}.js"
 }
