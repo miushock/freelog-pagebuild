@@ -17,14 +17,25 @@ module.exports = function(grunt) {
       scripts: {
         expand:true,
         cwd: './src',
-        src: './scripts/**',
-        dest: './test'
+        src: './*.js',
+        dest: './test/scripts'
+      },
+      style_sheets: {
+        expand:true,
+        cwd: '.src',
+        src: './*.css',
+        dest: './test/style_sheets'
       }
     },
     build_index_page: {
-      widget_file: "./src/{%=name%}.html",
+      widget_html: "./src/{%=name%}.html",
       container_file: "./template/container.html",
       dest: "./test/index.html"
+    },
+    submit: {
+      widget_html: ".src/{%=name%}.html",
+      widget_style: ".src{%=name%}.css",
+      widget_script: ".src{%=name%}.js"
     }
   });
 
