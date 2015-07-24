@@ -32,10 +32,10 @@ module.exports = function(grunt) {
       container_file: "./template/container.html",
       dest: "./test/index.html"
     },
-    submit: {
-      widget_html: ".src/{%=name%}.html",
-      widget_style: ".src{%=name%}.css",
-      widget_script: ".src{%=name%}.js"
+    submit_widget: {
+      widget_html: "./src/{%=name%}.html",
+      widget_style: "./src{%=name%}.css",
+      widget_script: "./src{%=name%}.js"
     }
   });
 
