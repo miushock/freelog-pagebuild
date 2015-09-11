@@ -1,7 +1,7 @@
-define('{%=name%}', ['freelog_api'], function(freelog_api){
+define(['domReady', 'freelog_api'], function(doc, freelog_api){
   var {%=name%} = {};
   
   //scripts gose here
 
-  return {%name%};
+  return {%=name%};
 });
