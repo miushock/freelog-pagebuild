@@ -1,6 +1,11 @@
 module.exports = function(grunt) {
 
   grunt.initConfig({
+    
+    //config and credential
+    pkg: grunt.file.readJSON('package.json'),
+    credential: grunt.file.readJSON('.credential.json'),
+
     jshint: {
       files: ['Gruntfile.js', 'src/**/*.js', 'test/**/*.js'],
       options: {
@@ -27,6 +32,8 @@ module.exports = function(grunt) {
         dest: './test/style_sheets'
       }
     },
+
+
     build_index_page: {
       widget_html: "./src/{%=name%}.html",
       container_file: "./template/container.html",
@@ -34,8 +41,12 @@ module.exports = function(grunt) {
     },
     submit_widget: {
       widget_html: "./src/{%=name%}.html",
-      widget_style: "./src{%=name%}.css",
-      widget_script: "./src{%=name%}.js"
+      widget_style: "./src/{%=name%}.css",
+      widget_script: "./src/{%=name%}.js",
+      name: '<%= pkg.name %>',
+      author_email: '<%= pkg.author.email %>',
+      auth_email: '<%= credential.user_email %>',
+      auth_pw: '<%= credential.password %>'
     }
   });
 
@@ -43,6 +54,7 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('freelog-widgetscript');
   grunt.loadNpmTasks('grunt-contrib-copy');
+  grunt.loadNpmtasks('grunt-http');
 
   grunt.registerTask('default', ['jshint']);
 

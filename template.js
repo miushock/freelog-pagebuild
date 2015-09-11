@@ -36,7 +36,8 @@ exports.template = function(grunt, init, done) {
         'grunt-contrib-copy': '~0.8.0',
         'jsdom': '~3.0.0',
         'jquery': '~2.1.4',
-        'freelog-widgetscript': '~0.0.4'
+        'freelog-widgetscript': '~0.1.0',
+        'grunt-http': '^1.6.0'
       }
     });
 
